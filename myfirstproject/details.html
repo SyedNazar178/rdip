@@ -1,0 +1,51 @@
+<html>
+	<style>
+	k{
+		color:blue;
+		margin-left:1300px; margin-right: 1300px; 
+	}
+	</style>
+<body>
+	<a href="https://www.iiit.ac.in/" >
+	<img src= "iiit.png" width= "90" height = "50"></a>
+	<k><a href="https://serc.iiit.ac.in/rdip">RDIP</a></k>
+	
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-bar w3-black">
+  <a href="homepage.html" class="w3-bar-item w3-button" >Home</a>
+  <a href="registrationpage.html" class="w3-bar-item w3-button">Registration page</a>
+</div>
+
+
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+firstname = unescape(params["firstname"]);
+email = unescape(params["email"]);
+mobile = unescape(params["mobile"]);
+
+college = unescape(params["college"]);
+
+document.write("firstname:= " + firstname + "<br>");
+document.write("email:= " + email + "<br>");
+document.write("mobile: = " + mobile + "<br>");
+document.write("college:= " +college + "<br>");
+
+
+
+</script>
+</html>
