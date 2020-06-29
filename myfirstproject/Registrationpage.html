@@ -1,69 +1,73 @@
 <html>
-	<html>
-	<style>
-	k{
-		color:blue;
-		margin-left:1300px; margin-right: 1300px; 
+	<head>
+		<style>
+			k{
+		margin-left:1300px;margin-right:1300px;color:darkblue;
 	}
-	</style>
-<body>
-	<a href="https://www.iiit.ac.in/" >
-	<img src= "iiit.png" width= "90" height = "50"></a>
-	<k><a href="https://serc.iiit.ac.in/rdip">RDIP</a></k>
-	
-
-<title>W3.CSS</title>
+	table, th, td {
+  border-collapse: collapse;
+  padding: 10px;
+  }</style>
+  <script>
+  function formvalidation()
+  {
+	var name = document.forms["myform"]["fname"];
+	var phone=document.forms["myfrom"]["moblie"];
+	var letters = /^[A-Za-z]+$/;
+     if(name.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+name.focus();
+return false;
+}
+var phoneno =/^[0-9]+$/;
+  if((phone.value.match(phoneno)))
+        {
+      return true;
+        }
+      else
+        {
+        alert("phone number should be 10 digits");
+        return false;
+        }
+}
+	  
+	  
+	  
+  
+	  
+	  
+	  
+	  
+	  
+	  </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<div class="w3-bar w3-black" > 
-  <a href="homepage.html" class="w3-bar-item w3-button" >Home</a>
-  <a href="Registrationpage.html" class="w3-bar-item w3-button">Registration page</a>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></head>
+	<body>
+<a href="https://www.iiit.ac.in/" ><img src="img1.png" width="90" height="50"></a>
+<k><a href="https://serc.iiit.ac.in/rdip" >RDIP</a></k>
+<div class="w3-bar w3-black">
+  <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+  <a href="registration.html" class="w3-bar-item w3-button">Registration Form</a>
 </div>
-
-<form type=get action="details.html">
-	<!--
-<table>
-<tr>
-<td>First Name:</td>
-<td><input type=text name=firstname size=10></td>
+<form type="Get" action="details.html" name="myform" onsubmit="return formvalidation();">
+<table style="width:600px">
+<tr><td><center><b>First Name:</b></center></td><td><input type="text" name=fname required /></td>
 </tr>
-<tr>
-<td>Last Name:</td>
-<td><input type=text name=lastname size=10></td>
+<tr><td><center><b>Email:</b></center></td><td><input type="text" name=email required /><td>
 </tr>
-<tr>
-<td>Age:</td>
-<td><input type=text name=age size=10></td>
+<tr><td><b><center>Phone No:</b></center></td><td><input type="number" name=mobile required /></td>
 </tr>
-<tr>
-<td colspan=2><input type=submit value="Submit">
-</td>
-</tr>
+<tr><td><b><center>Gender:</center></b></td><td><input type="radio" name=gender>Male  <input type="radio" name=gender>Female  <input type="radio" name=gender>Others</td></tr>
+<tr><td><b><center>Reason for RDIP:</center></b></td><td><input type="checkbox" name=check>HTML  <input type="checkbox" name=check>CSS  <input type="checkbox" name=check>JavaScript</td></tr>
+<tr><td><b><center>College</center></b></td><td><input type="text" name="college" required /></td></tr>
+<tr><td><center><input type="checkbox"></center></td><td>I declare above details given by me are true.</td></tr>
+<tr><td><center><input type="submit" value="submit" /></center></td><td><input type="reset" value="reset"></td></tr>
 </table>
-</form>-->
-<table  style="width:600px">
-<tr><td><b><center>Firstname</center></b></td><td><input type="text" name=firstname required/></td>
-</tr>
-<tr><td><b><center>email</center></b></td><td><input type="text" name=email required/></td>
-</tr>
-
-<tr><td><b><center>mobile</center></b></td><td><input type="text" name=mobile required/></td>
-</tr>
-
-<tr><td><b><center>Gender</center><b></b></td>
-<td><input type="radio" name=Gender/>Male
-<input type="radio" name=Gender />female
-<input type="radio" name=Gender />other</td>
-</tr>
-<tr><td><b><center>Reason to RDIP:</center><b></b></td>
-<td><input type=checkbox name=check />html
-<input type=checkbox name=check />Css
-<input type=checkbox name=check />Java Script</td>
-</tr>
-<tr><td><b><center>college</center></b></td><td><input type="text" name=college required/></td>
-</tr>
-<tr><td><center><input type="checkbox"/></td></center> <td> i declare above details given by me are true</td></tr>
-<tr><td><center><input type="submit" value="submit" on click="add text()"/></center></td>
-	<td><input type="reset" value="reset"/></td>
-</tr>
+</form>
+</body>
 </html>
